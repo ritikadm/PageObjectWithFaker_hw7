@@ -2,29 +2,28 @@
 package tests;
 
 
+import helpers.TestDataRandom;
 import org.junit.jupiter.api.Test;
-import page.FormPage;
-import page.components.ResultTableComponent;
+import pages.FormPage;
+import pages.components.ResultTableComponent;
 
 
 public class RegistrationTestsWithFaker extends TestBase {
     FormPage formPage = new FormPage();
     ResultTableComponent resultTable = formPage.getResultTable();
 
-    TestDataRandom testData = new TestDataRandom();
-
-    String firstName = testData.getFirstName(),
-            lastName = testData.getLastName(),
-            userEmail = testData.getEmail(),
-            userGender = testData.getGender(),
-            userNumber = testData.getNumber(),
-            subject = testData.getRandomSubject(),
+    String firstName = TestDataRandom.getFirstName(),
+            lastName = TestDataRandom.getLastName(),
+            userEmail = TestDataRandom.getEmail(),
+            userGender = TestDataRandom.getGender(),
+            userNumber = TestDataRandom.getNumber(),
+            subject = TestDataRandom.getRandomSubject(),
             picture = "picture.jpg",
-            hobbies = testData.getRandomHobbies(),
-            streetAddress = testData.getAddress(),
-            state = testData.getState(),
-            city = testData.getCity(state);
-    String[] dateOfBirth = testData.getDateOfBirth();
+            hobbies = TestDataRandom.getRandomHobbies(),
+            streetAddress = TestDataRandom.getAddress(),
+            state = TestDataRandom.getState(),
+            city = TestDataRandom.getCity(state);
+    String[] dateOfBirth = TestDataRandom.getDateOfBirth();
 
     @Test
     void fillFormTest() {

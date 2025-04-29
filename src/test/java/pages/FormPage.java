@@ -1,18 +1,16 @@
 
-package page;
+package pages;
 
 import com.codeborne.selenide.SelenideElement;
-import page.components.CalendarComponent;
-import page.components.ResultTableComponent;
+import pages.components.CalendarComponent;
+import pages.components.ResultTableComponent;
 
-import static com.codeborne.selenide.Condition.cssValue;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selenide.executeJavaScript;
-import static com.codeborne.selenide.files.DownloadActions.click;
 
 public class FormPage {
-    private SelenideElement firstNameInput = $("#firstName"),
+    private final SelenideElement firstNameInput = $("#firstName"),
             lastNameInput = $("#lastName"),
             userEmailInput = $("#userEmail"),
             genderWrapper = $("#genterWrapper"),
